@@ -8,33 +8,41 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background: #f9f9f9;
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 設定整個畫面高度 */
         }
 
         .content {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 20px;
-            margin: 0 auto;
-            max-width: 80%; /* 調整整體比例為 80% */
+            width: 80%;
+            max-width: 600px;
             background: #fff;
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* 防止寬度計算問題 */
         }
 
         .text {
-            flex: 2; /* 調整文字區域比例 */
-            text-align: left;
+            width: 100%;
+            text-align: center;
+            word-wrap: break-word; /* 自動換行 */
         }
 
         iframe {
-            flex: 1; /* 調整圖片區域比例 */
-            height: 400px;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9; /* 確保圖片比例 */
             border: none;
             border-radius: 8px;
         }
@@ -60,7 +68,7 @@
     <div class="content">
         <div class="text">
             <h1>彰化縣熱力圖</h1>
-            <p>動畫式的彰化縣村里級熱圖，透過點擊縣市中的鄉鎮再顯示村里細節。<br/>資料以村里為主，但可選擇鄉鎮區塊的資料計算方式要透過村里資料加總。</p>
+            <p>動畫式的彰化縣村里級熱圖，透過點擊縣市中的鄉鎮再顯示村里細節。<br/>資料以村里為主，但可選擇鄉鎮區塊的資料計算方式。</p>
         </div>
         <iframe src="https://plotdb.io/v/chart/37210" allowfullscreen="true"></iframe>
     </div>
