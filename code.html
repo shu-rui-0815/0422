@@ -5,63 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>彰化縣熱力圖</title>
     <style>
-        /* 網頁的基本樣式 */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #ffffff, #e6e6e6);
-            color: #333;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             padding: 20px;
-            margin: 20px auto;
-            max-width: 1200px;
+            background: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+
+        .content {
+            margin: 0 auto;
+            max-width: 800px;
             background: #fff;
+            padding: 20px;
             border: 1px solid #ddd;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            gap: 20px;
-        }
-
-        .title {
-            text-align: center;
-            font-size: 1.5rem;
-            color: black;
-            margin-bottom: 10px;
-        }
-
-        .iframe-container {
-            width: 100%;
-            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         iframe {
-            border-radius: 8px;
+            width: 100%;
+            height: 400px;
             border: none;
-            width: 100%;
-            height: 600px;
-        }
-
-        .description {
-            width: 100%;
-            padding: 20px;
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #555;
-            text-align: center;
+            border-radius: 8px;
+            margin: 20px 0;
         }
 
         footer {
-            text-align: center;
-            margin: 20px 0;
-            color: #777;
+            margin-top: 20px;
             font-size: 0.9rem;
+            color: #777;
         }
 
         footer a {
@@ -75,29 +49,11 @@
     </style>
 </head>
 <body>
-    <!-- 主內容容器 -->
-    <div class="container">
-        <!-- 標題 -->
-        <div class="title">
-            彰化縣熱力圖
-        </div>
-
-        <!-- 熱力圖 -->
-        <div class="iframe-container">
-            <iframe 
-                src="https://plotdb.io/v/chart/37210" 
-                allowfullscreen="true" 
-                frameborder="0">
-            </iframe>
-        </div>
-
-        <!-- 內文 -->
-        <div class="description">
-            動畫式的彰化縣村里級熱圖，透過點擊縣市中的鄉鎮再顯示村里細節。資料以村里為主，但可選擇鄉鎮區塊的資料計算方式要透過村里數值累加所得。
-        </div>
+    <div class="content">
+        <h1>彰化縣熱力圖</h1>
+        <iframe src="https://plotdb.io/v/chart/37210" allowfullscreen="true"></iframe>
+        <p>動畫式的彰化縣村里級熱圖，透過點擊縣市中的鄉鎮再顯示村里細節。資料以村里為主，但可選擇鄉鎮區塊的資料計算方式要透過村里數值累加所得。</p>
     </div>
-
-    <!-- 頁尾 -->
     <footer>
         © 2025 由 <a href="https://plotdb.io/" target="_blank">PlotDB</a> 提供圖表服務
     </footer>
