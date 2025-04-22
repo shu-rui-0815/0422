@@ -14,14 +14,7 @@
             color: #333;
         }
 
-        header {
-            color: black;
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 1.5rem;
-        }
-
-        .content {
+        .container {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -34,6 +27,13 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             gap: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: black;
+            margin-bottom: 10px;
         }
 
         .iframe-container {
@@ -54,6 +54,7 @@
             font-size: 1rem;
             line-height: 1.6;
             color: #555;
+            text-align: center;
         }
 
         footer {
@@ -74,13 +75,13 @@
     </style>
 </head>
 <body>
-    <!-- 頁首 -->
-    <header>
-        彰化縣熱力圖
-    </header>
+    <!-- 主內容容器 -->
+    <div class="container">
+        <!-- 標題 -->
+        <div class="title">
+            彰化縣熱力圖
+        </div>
 
-    <!-- 主內容 -->
-    <div class="content">
         <!-- 熱力圖 -->
         <div class="iframe-container">
             <iframe 
@@ -89,7 +90,8 @@
                 frameborder="0">
             </iframe>
         </div>
-        <!-- 文字說明 -->
+
+        <!-- 內文 -->
         <div class="description">
             動畫式的彰化縣村里級熱圖，透過點擊縣市中的鄉鎮再顯示村里細節。資料以村里為主，但可選擇鄉鎮區塊的資料計算方式要透過村里數值累加所得。
         </div>
